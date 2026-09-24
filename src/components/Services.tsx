@@ -6,58 +6,51 @@ import { Reveal } from "./ui/Reveal";
 const SERVICES = [
   {
     title: "Web Design",
-    description: "Modern, conversion-focused designs tailored to your brand and audience.",
+    description:
+      "Crafting visually appealing, user-friendly designs that reflect your brand. From wireframes to final prototypes, every detail is considered.",
     icon: Layout,
   },
   {
     title: "Web Development",
-    description: "Fast, responsive, pixel-perfect builds using modern frameworks.",
+    description:
+      "Building functional, no-code websites that are easy to manage and optimized for performance across devices.",
     icon: Code2,
   },
   {
     title: "Brand Identity",
-    description: "Cohesive visual systems — logos, colors, typography that stand out.",
+    description:
+      "Crafting cohesive visual branding, including logos, color palettes, and typography, to establish a strong brand presence.",
     icon: Palette,
   },
   {
     title: "UX/UI Design",
-    description: "Intuitive interfaces backed by research and thoughtful interaction design.",
+    description:
+      "Designing intuitive user interfaces and seamless user experiences to enhance engagement and usability.",
     icon: Sparkles,
   },
   {
     title: "Consultation Services",
-    description: "Strategic guidance to help you make the right product decisions.",
+    description:
+      "Providing expert advice and actionable insights to help you plan and execute your design projects effectively.",
     icon: MessageCircle,
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-16 md:py-32">
-      <div className="container-app flex flex-col gap-16">
-        <SectionHeading
-          eyebrow="What I Do"
-          title={
-            <>
-              Services designed to <span className="text-[color:var(--color-lime)]">grow your brand.</span>
-            </>
-          }
-          description="From concept to launch, I offer end-to-end design and development services."
-        />
+    <section id="services" className="py-16 md:py-[120px]">
+      <div className="container-app flex flex-col gap-14">
+        <SectionHeading eyebrow="Services" title="What I can do for you" />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
             <Reveal key={service.title} delay={index * 0.06} className={index === 4 ? "sm:col-span-2 lg:col-span-1" : ""}>
               <motion.div
                 whileHover="hover"
-                className="group relative flex h-full flex-col justify-between gap-10 overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-[color:var(--color-surface)] p-8 transition-colors duration-300 hover:border-[color:var(--color-lime)]/40"
+                className="squircle group relative flex h-full flex-col justify-between gap-10 overflow-hidden rounded-3xl border border-[color:var(--color-border)] bg-white p-8 shadow-[var(--shadow-soft)]"
               >
-                <div
-                  className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-30"
-                  style={{ background: "var(--color-lime)" }}
-                />
                 <div className="flex items-center justify-between">
-                  <span className="grid size-12 place-items-center rounded-2xl bg-[color:var(--color-surface-2)] text-[color:var(--color-lime)]">
+                  <span className="grid size-12 place-items-center rounded-2xl bg-[color:var(--color-surface)] text-[color:var(--color-accent)]">
                     <service.icon size={22} />
                   </span>
                   <motion.span
@@ -69,7 +62,7 @@ export function Services() {
                   </motion.span>
                 </div>
                 <div>
-                  <h3 className="font-[var(--font-display)] text-xl font-semibold text-[color:var(--color-ink)]">
+                  <h3 className="font-sans text-xl font-bold text-[color:var(--color-ink)]">
                     {service.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-ink-muted)]">

@@ -6,41 +6,34 @@ const FAQS = [
   {
     question: "What services do you offer?",
     answer:
-      "I offer web design, web development, brand identity, UX/UI design and consultation services — everything you need to launch and grow a polished digital presence.",
+      "I provide a full range of design services including UI/UX design, web design, branding, and digital product development.",
   },
   {
     question: "How long does a typical project take?",
-    answer:
-      "Most projects take between 1-3 weeks depending on scope. Landing pages typically ship within 7 days, while full websites take 2-3 weeks.",
+    answer: "Project timelines vary depending on complexity, but most projects are completed within 4–8 weeks.",
   },
   {
     question: "Can I request revisions during the project?",
     answer:
-      "Absolutely. Every package includes revision rounds so we can refine the design together until it feels exactly right.",
+      "Yes! Feedback is a crucial part of the design process. I include multiple rounds of revisions to ensure the final design meets your expectations.",
   },
   {
     question: "Do you work with remote clients?",
     answer:
-      "Yes, I work with clients worldwide. All communication happens over email, Slack and video calls to keep things smooth across time zones.",
+      "Absolutely. I have experience collaborating with clients worldwide using Zoom, Figma, and other remote tools to ensure smooth communication.",
   },
   {
     question: "What is your pricing structure?",
     answer:
-      "Pricing is based on project scope, starting at $1990/month for the Starter package. Check the pricing section above for full details, or reach out for a custom quote.",
+      "Pricing depends on the scope and complexity of the project. After understanding your requirements, I provide a clear and transparent quote before starting.",
   },
 ];
 
 export function FAQ() {
   return (
-    <section className="py-16 md:py-32">
+    <section className="py-16 md:py-[120px]">
       <div className="container-app grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="Frequently asked questions"
-          description="Everything you need to know before we start working together."
-          align="left"
-        />
-
+        <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" align="left" />
         <Reveal delay={0.1}>
           <Accordion items={FAQS} />
         </Reveal>

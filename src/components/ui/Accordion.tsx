@@ -12,13 +12,10 @@ type AccordionItemProps = {
 function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProps) {
   return (
     <div className="border-b border-[color:var(--color-border)]">
-      <button
-        onClick={onToggle}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left"
-      >
+      <button onClick={onToggle} className="flex w-full items-center justify-between gap-6 py-6 text-left">
         <span
-          className={`text-[17px] font-medium transition-colors duration-300 md:text-lg ${
-            isOpen ? "text-[color:var(--color-lime)]" : "text-[color:var(--color-ink)]"
+          className={`text-[17px] font-semibold transition-colors duration-300 md:text-lg ${
+            isOpen ? "text-[color:var(--color-accent)]" : "text-[color:var(--color-ink)]"
           }`}
         >
           {question}
@@ -28,7 +25,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           className={`grid size-9 shrink-0 place-items-center rounded-full border transition-colors duration-300 ${
             isOpen
-              ? "border-[color:var(--color-lime)] text-[color:var(--color-lime)]"
+              ? "border-[color:var(--color-accent)] text-[color:var(--color-accent)]"
               : "border-[color:var(--color-border)] text-[color:var(--color-ink-muted)]"
           }`}
         >

@@ -1,30 +1,25 @@
 @import "tailwindcss";
-@import "@fontsource/inter/latin-400.css";
-@import "@fontsource/inter/latin-500.css";
-@import "@fontsource/inter/latin-600.css";
-@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/manrope/latin-400.css";
 @import "@fontsource/manrope/latin-500.css";
 @import "@fontsource/manrope/latin-600.css";
 @import "@fontsource/manrope/latin-700.css";
-@import "@fontsource/manrope/latin-800.css";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
-  --color-bg: #0a0a0d;
-  --color-bg-soft: #0e0e12;
-  --color-surface: #141418;
-  --color-surface-2: #1a1a20;
-  --color-border: #26262e;
-  --color-border-soft: #1e1e24;
-  --color-ink: #f4f4f2;
-  --color-ink-muted: #a6a6b0;
-  --color-ink-dim: #6f6f7a;
-  --color-lime: #ccff00;
-  --color-lime-dim: #a3d600;
+  --color-bg: #ffffff;
+  --color-surface: #f7f6f3;
+  --color-surface-2: #f0efe9;
+  --color-border: #e7e5df;
+  --color-ink: #0b0d12;
+  --color-ink-muted: #5c5c5c;
+  --color-ink-soft: #8a8a8a;
+  --color-accent: #fb8500;
+  --color-accent-dark: #d97300;
 
-  --shadow-glow: 0 0 0 1px rgba(204,255,0,0.15), 0 8px 40px -8px rgba(204,255,0,0.25);
+  --shadow-soft: 0px 0px 15px rgba(6,125,140,0.05), 0px 0.72px 1.58px rgba(84,84,84,0.35), 0px 2.17px 4.78px rgba(84,84,84,0.33), 0px 5.74px 12.64px rgba(84,84,84,0.27), 0px 18px 39.6px rgba(84,84,84,0.09);
+  --shadow-btn-primary: 0px 1px 14px rgba(250,133,0,0.3), inset 0px 2px 4px rgba(255,255,255,0.25);
+  --shadow-btn-secondary: 0px 2px 5px rgba(0,0,0,0.15), inset 0px 0.24px 0.53px rgba(255,255,255,0.04), inset 0px 2px 4.4px rgba(255,255,255,0.3);
 }
 
 @layer base {
@@ -47,21 +42,20 @@
   }
 
   ::selection {
-    background: var(--color-lime);
-    color: #0a0a0d;
+    background: var(--color-accent);
+    color: #fff;
   }
 }
 
 @layer utilities {
   .container-app {
-    max-width: 1240px;
+    max-width: 1080px;
     margin-inline: auto;
-    padding-inline: 24px;
+    padding-inline: 20px;
   }
 
-  .noise-bg {
-    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.045) 1px, transparent 0);
-    background-size: 22px 22px;
+  .squircle {
+    corner-shape: superellipse(1.5);
   }
 
   .text-balance {
@@ -84,14 +78,5 @@
 }
 
 .animate-float {
-  animation: float-y 5s ease-in-out infinite;
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 14s linear infinite;
+  animation: float-y 6s ease-in-out infinite;
 }

@@ -8,8 +8,6 @@ const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -30,12 +28,12 @@ export function Navbar() {
       <div
         className={`container-app flex items-center justify-between rounded-full transition-all duration-300 ${
           scrolled
-            ? "mt-3 border border-[color:var(--color-border)] bg-[#0a0a0d]/80 px-5 py-2.5 backdrop-blur-xl md:mt-4"
-            : "mt-5 px-5 py-3 md:mt-8"
+            ? "mt-3 border border-[color:var(--color-border)] bg-white/90 px-5 py-2.5 shadow-[var(--shadow-soft)] backdrop-blur-xl md:mt-4"
+            : "mt-5 px-5 py-3 md:mt-6"
         }`}
       >
-        <a href="#home" className="flex items-center gap-2 text-lg font-semibold tracking-tight text-[color:var(--color-ink)]">
-          <span className="grid size-7 place-items-center rounded-full bg-[color:var(--color-lime)] text-[13px] font-bold text-[#0a0a0d]">
+        <a href="#home" className="flex items-center gap-2 text-lg font-bold tracking-tight text-[color:var(--color-ink)]">
+          <span className="grid size-8 place-items-center rounded-full bg-[color:var(--color-ink)] text-[13px] font-bold text-white">
             Z
           </span>
           Zedex.
@@ -54,8 +52,8 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" size="md" icon={false}>
-            Hire Me
+          <Button href="https://x.com/Hammad7525" size="md" icon={false}>
+            Contact Me
           </Button>
         </div>
 
@@ -74,10 +72,10 @@ export function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-[#0a0a0d]/98 backdrop-blur-xl lg:hidden"
+            className="fixed inset-0 z-[60] bg-white/98 backdrop-blur-xl lg:hidden"
           >
             <div className="container-app flex items-center justify-between py-5">
-              <span className="text-lg font-semibold text-[color:var(--color-ink)]">Zedex.</span>
+              <span className="text-lg font-bold text-[color:var(--color-ink)]">Zedex.</span>
               <button
                 onClick={() => setOpen(false)}
                 className="grid size-10 place-items-center rounded-full border border-[color:var(--color-border)] text-[color:var(--color-ink)]"
@@ -98,14 +96,14 @@ export function Navbar() {
                   variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-[color:var(--color-border-soft)] py-4 text-2xl font-medium text-[color:var(--color-ink)]"
+                  className="border-b border-[color:var(--color-border)] py-4 text-2xl font-semibold text-[color:var(--color-ink)]"
                 >
                   {link.label}
                 </motion.a>
               ))}
               <div className="mt-6">
-                <Button href="#contact" onClick={() => setOpen(false)} size="lg">
-                  Hire Me
+                <Button href="https://x.com/Hammad7525" onClick={() => setOpen(false)} size="lg">
+                  Contact Me
                 </Button>
               </div>
             </motion.nav>
